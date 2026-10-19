@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تواصل معنا | مجمع مشعل الحميدي</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body data-protected="true">
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="home.html"><span class="logo"><b>م</b></span>مجمع مشعل الحميدي</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="القائمة"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
+    <a href="home.html">الرئيسية</a>
+    <a href="mushaf.html">المصحف</a>
+    <a href="progress.html">مراجعة التقدم</a>
+    <a href="contact.html" class="active">تواصل معنا</a>
+    <a href="index.html" class="logout" id="logout">تسجيل الخروج</a>
+  </nav>
+</div></header>
+
+<div class="hero scene mini"><div class="wrap"><h1>تواصل معنا</h1><p>اكتب سؤالك أو ملاحظتك وسنرد عليك في أقرب وقت.</p></div></div>
+
+<section><div class="wrap">
+  <div class="contact">
+    <form class="card" id="contactForm" novalidate>
+      <div class="row">
+        <div><label for="name">الاسم</label><input id="name" type="text" required></div>
+        <div><label for="phone">رقم الجوال (اختياري)</label><input id="phone" type="tel"></div>
+      </div>
+      <label for="email">البريد الإلكتروني</label><input id="email" type="email" required>
+      <label for="subject">الموضوع</label>
+      <select id="subject"><option>استفسار عن التسجيل</option><option>استفسار عن المواعيد</option><option>ملاحظة أو اقتراح</option><option>أخرى</option></select>
+      <label for="text">الرسالة</label><textarea id="text" required></textarea>
+      <button class="btn dark" style="margin-top:20px" type="submit">إرسال الرسالة</button>
+      <div class="msg" id="msg" role="alert"></div>
+    </form>
+
+    <aside class="card tint">
+      <h3>بيانات المجمع</h3>
+      <p style="margin-bottom:8px">البيانات التالية أمثلة؛ استبدلها ببيانات المجمع الفعلية.</p>
+      <ul class="info">
+        <li><b>العنوان</b>اكتب عنوان المجمع هنا</li>
+        <li><b>الهاتف</b><span dir="ltr">+000 000 000 000</span></li>
+        <li><b>البريد</b><span dir="ltr">info@example.com</span></li>
+        <li><b>أوقات الاستقبال</b>السبت – الأربعاء، 4:00 – 8:00 مساءً</li>
+      </ul>
+    </aside>
+  </div>
+</div></section>
+
+<footer>© <span id="year"></span> مجمع مشعل الحميدي. جميع الحقوق محفوظة.</footer>
+<script src="common.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

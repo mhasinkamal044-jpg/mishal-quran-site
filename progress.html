@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مراجعة التقدم | مجمع مشعل الحميدي</title>
+<link rel="stylesheet" href="progress.css">
+</head>
+<body data-protected="true">
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="home.html"><span class="logo"><b>م</b></span>مجمع مشعل الحميدي</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="القائمة"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
+    <a href="home.html">الرئيسية</a>
+    <a href="mushaf.html">المصحف</a>
+    <a href="progress.html" class="active">مراجعة التقدم</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="index.html" class="logout" id="logout">تسجيل الخروج</a>
+  </nav>
+</div></header>
+
+<div class="hero scene mini"><div class="wrap"><h1>تقدّم <span data-user-name></span> في الحفظ</h1><p>سجّل كل جلسة حفظ أو مراجعة، وستُحفظ بياناتك على هذا المتصفح.</p></div></div>
+
+<section><div class="wrap">
+
+  <div class="grid">
+    <div class="card"><div class="stat" id="stJuz">0</div><div class="stat-l">أجزاء محفوظة من 30</div></div>
+    <div class="card"><div class="stat" id="stNew">0</div><div class="stat-l">جلسات حفظ جديد</div></div>
+    <div class="card"><div class="stat" id="stRev">0</div><div class="stat-l">جلسات مراجعة</div></div>
+    <div class="card"><div class="stat" id="stAvg">–</div><div class="stat-l">متوسط التقييم من 5</div></div>
+  </div>
+
+  <div class="card" style="margin-top:20px">
+    <h3>الحفظ الكلي</h3>
+    <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+    <p id="barTxt"></p>
+    <label for="juz">عدد الأجزاء التي أتممتَ حفظها</label>
+    <select id="juz"></select>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2 class="sec-title">تسجيل جلسة جديدة</h2>
+  <form class="card" id="logForm" novalidate style="margin-top:16px">
+    <div class="row">
+      <div><label for="date">التاريخ</label><input id="date" type="date" required></div>
+      <div><label for="type">نوع الجلسة</label>
+        <select id="type"><option>حفظ جديد</option><option>مراجعة</option></select></div>
+    </div>
+    <div class="row">
+      <div><label for="surah">السورة</label><select id="surah" required></select></div>
+      <div><label for="rating">التقييم</label>
+        <select id="rating"><option value="5">5 – ممتاز</option><option value="4">4 – جيد جداً</option><option value="3">3 – جيد</option><option value="2">2 – يحتاج مراجعة</option><option value="1">1 – ضعيف</option></select></div>
+    </div>
+    <div class="row">
+      <div><label for="from">من الآية</label><input id="from" type="number" min="1" required></div>
+      <div><label for="to">إلى الآية</label><input id="to" type="number" min="1" required></div>
+    </div>
+    <button class="btn dark" style="margin-top:20px" type="submit">حفظ الجلسة</button>
+    <div class="msg" id="msg" role="alert"></div>
+  </form>
+
+  <h2 class="sec-title" style="margin-top:40px">سجل الجلسات</h2>
+  <div class="tbl-wrap" style="margin-top:12px"><table>
+    <thead><tr><th>التاريخ</th><th>النوع</th><th>السورة</th><th>الآيات</th><th>التقييم</th><th></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+</div></section>
+
+<footer>© <span id="year"></span> مجمع مشعل الحميدي. جميع الحقوق محفوظة.</footer>
+<script src="common.js"></script>
+<script src="progress.js"></script>
+</body>
+</html>
